@@ -1,9 +1,114 @@
-#For Windows
----------------------------------------------------
-python -m pip install pyinstaller pygame-ce
-python -m PyInstaller CumleKurmaYarisi.spec --clean
+===============================================================
+    DEVRİLMEYEN CÜMLE - Windows EXE Oluşturma Rehberi
+===============================================================
 
-#For MacOS
----------------------------------------------------
-python3 -m pip install pyinstaller pygame-ce
-python3 -m pyinstaller CumleKurmaYarisi.spec --clean
+ÖNEMLİ: Python 3.10+ bilgisayarınızda kurulu olmalıdır.
+         https://www.python.org/downloads/
+
+Aşağıdaki komutları sırayla Windows CMD (Komut İstemi) 
+terminaline yapıştırın.
+
+---------------------------------------------------------------
+  ADIM 1: Proje klasörüne git (kendi yolunuzu yazın)
+---------------------------------------------------------------
+
+cd /d "%USERPROFILE%\Desktop\DevrilmeyenCümle"
+
+---------------------------------------------------------------
+  ADIM 2: Sanal ortam oluştur ve aktif et
+---------------------------------------------------------------
+
+python -m venv venv
+venv\Scripts\activate
+
+---------------------------------------------------------------
+  ADIM 3: Gerekli paketleri kur
+---------------------------------------------------------------
+
+pip install pyinstaller pygame-ce
+
+---------------------------------------------------------------
+  ADIM 4: EXE dosyasını oluştur (spec dosyası ile)
+---------------------------------------------------------------
+
+pyinstaller CumleKurmaYarisi.spec --clean --noconfirm
+
+---------------------------------------------------------------
+  SONUÇ
+---------------------------------------------------------------
+
+İşlem bitince EXE dosyası şurada olacak:
+  dist\Devrilmeyen Cümle.exe
+
+Bu tek dosyayı istediğiniz yere kopyalayıp çalıştırabilirsiniz.
+sentences.txt ve background.png exe içine gömülüdür.
+
+
+===============================================================
+    TEK SATIRDA HIZLI YAPMA (CMD'ye yapıştır, Enter'a bas)
+===============================================================
+
+python -m venv venv && venv\Scripts\activate && pip install pyinstaller pygame-ce && pyinstaller CumleKurmaYarisi.spec --clean --noconfirm
+
+===============================================================
+        POWERSHELL KULLANIYORSANIZ (tek satır)
+===============================================================
+
+python -m venv venv; .\venv\Scripts\Activate.ps1; pip install pyinstaller pygame-ce; pyinstaller CumleKurmaYarisi.spec --clean --noconfirm
+
+
+
+
+
+
+===============================================================
+     DEVRİLMEYEN CÜMLE - macOS APP Oluşturma Rehberi
+===============================================================
+
+ÖNEMLİ: Python 3.10+ bilgisayarınızda kurulu olmalıdır.
+         brew install python   veya   https://www.python.org
+
+Aşağıdaki komutları sırayla macOS Terminal'e yapıştırın.
+
+---------------------------------------------------------------
+  ADIM 1: Proje klasörüne git
+---------------------------------------------------------------
+
+cd ~/Desktop/DevrilmeyenCümle
+
+---------------------------------------------------------------
+  ADIM 2: Sanal ortam oluştur ve aktif et
+---------------------------------------------------------------
+
+python3 -m venv venv
+source venv/bin/activate
+
+---------------------------------------------------------------
+  ADIM 3: Gerekli paketleri kur
+---------------------------------------------------------------
+
+pip install pyinstaller pygame-ce
+
+---------------------------------------------------------------
+  ADIM 4: APP dosyasını oluştur (spec dosyası ile)
+---------------------------------------------------------------
+
+python3 -m PyInstaller CumleKurmaYarisi.spec --clean --noconfirm
+
+---------------------------------------------------------------
+  SONUÇ
+---------------------------------------------------------------
+
+İşlem bitince çalıştırılabilir dosya şurada olacak:
+  dist/Devrilmeyen Cümle
+
+Çift tıklayarak veya terminalden şöyle çalıştırabilirsiniz:
+  ./dist/Devrilmeyen\ Cümle
+
+
+===============================================================
+  TEK SATIRDA HIZLI YAPMA (Terminal'e yapıştır, Enter'a bas)
+===============================================================
+
+cd ~/Desktop/DevrilmeyenCümle && python3 -m venv venv && source venv/bin/activate && pip install pyinstaller pygame-ce && python3 -m PyInstaller CumleKurmaYarisi.spec --clean --noconfirm
+
