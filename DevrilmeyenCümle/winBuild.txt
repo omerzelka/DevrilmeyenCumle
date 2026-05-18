@@ -5,5 +5,5 @@ python -m PyInstaller CumleKurmaYarisi.spec --clean
 
 #For MacOS
 ---------------------------------------------------
-pip install pyinstaller pygame-ce
-pyinstaller CumleKurmaYarisi.spec --clean
+python3 -m pip install pyinstaller pygame-ce
+python3 -m pyinstaller CumleKurmaYarisi.spec --clean
